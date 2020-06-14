@@ -16,10 +16,12 @@
   </head>
   <body>
     <!-- three JS -->
-    <script src="../../resources/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.min.js"></script>
     <script src="game.js"></script>
     <script>
-      document.addEventListener("DOMConetedLoaded", function () {
+      //I agonized for a long time over the code and the mistake was a misspelling in my event listener!
+      //we need to wait for "DOMCONTENT TO LOAD" before we can call the game function
+      document.addEventListener("DOMContentLoaded", function () {
         //calling the game from game.js
         const game = new Game();
         window.game = game; //for debugging only
